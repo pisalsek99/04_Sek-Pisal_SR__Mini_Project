@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.5/dist/flowbite.min.js"></script>
+
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+ 
+    <!-- Icon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Style Custom -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .product-card {
+        position: relative;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .heart-icon {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: red;
+        background: white;
+        border-radius: 50%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .product-image {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+   <!-- Nav -->
+   <nav
+   class="bg-white w-full px-12 shadow-md py-4 flex justify-between items-center max-w-9xl mx-auto"
+ >
+   <!-- Logo -->
+   <div class="text-3xl font-bold">cyber</div>
+
+   <!-- Search Bar -->
+   <div class="flex-1 max-w-md mx-4">
+     <div class="relative">
+       <span
+         class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+       >
+         <i class="fas fa-search"></i>
+       </span>
+       <input
+         type="text"
+         placeholder="Search"
+         class="w-full pl-10 pr-4 py-2 border rounded-md bg-gray-100 text-gray-700 focus:outline-none"
+       />
+     </div>
+   </div>
+
+   <!-- Navigation Links -->
+   <div class="hidden md:flex space-x-6 items-center">
+     <a href="../html/index.html" class="text-gray-500 text-lg">Home</a>
+     <a href="#" class="text-gray-500 text-lg">About</a>
+     <a href="#" class="text-gray-500 text-lg">Contact Us</a>
+     <a href="#" class="text-gray-500 text-lg">Blog</a>
+   </div>
+
+   <!-- Icons -->
+   <div class="flex space-x-6 text-gray-700">
+     <button><i class="fas fa-heart"></i></button>
+     <button><i class="fas fa-shopping-cart"></i></button>
+     <button><i class="fas fa-user"></i></button>
+   </div>
+ </nav>
+
+    
+    
+  
+
+    <section class="p-4 px-10 m-2 w-full px-12 py-4 flex justify-between items-center mx-auto mt-6 text-gray-600 text-[16px] font-medium leading-4 font-[Inter]">
+      <div class="flex items-center space-x-2 text-gray-600">
+        <p class="hover:text-gray-800 cursor-pointer">Home</p>
+        <span class="text-gray-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            class="w-4 h-4 text-gray-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </span>
+        <p class="hover:text-gray-800 cursor-pointer">Catalog</p>
+        <span class="text-gray-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            class="w-4 h-4 text-gray-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </span>
+        <p class="font-bold text-gray-800">Smartphones</p>
+      </div>
+    </section>
+    
+    
+    <!-- Main Content -->
+    <div class="container mx-auto flex py-10 px-4">
+      <!-- Sidebar -->
+      <aside class="w-1/4 bg-white p-4 shadow-md rounded-lg">
+
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Brand
+            </h3>
+            <hr class="border-2 mt-2">
+            <span class="ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" aria-hidden="true" class="w-4 h-4 mx-auto transition-transform rotate-180">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+              
+            </span>
+          </button>
+        
+        </div>
+       
+        <hr class="border-t-2 border-blue-gray-100 mt-2"/> 
+
+        <!-- Search Aside -->
+        <div class="flex-1 max-w-md  mt-4">
+            <div class="relative">
+              <span
+                class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+              >
+                <i class="fas fa-search"></i>
+              </span>
+              <input
+                type="text"
+                placeholder="Search"
+                class="w-full pl-10 pr-4 py-2 border rounded-md bg-gray-100 text-gray-700 focus:outline-none"
+              />
+            </div>
+          </div>
+
+        <ul class="space-y-2 pt-4">
+          <li><input type="checkbox" /> Apple</li>
+          <li><input type="checkbox" /> Samsung</li>
+          <li><input type="checkbox" /> Google</li>
+          <li><input type="checkbox" /> OnePlus</li>
+          <li><input type="checkbox" /> Xiaomi</li>
+          <li><input type="checkbox" /> Oppo</li>
+          <li><input type="checkbox" /> Honor</li>
+          <li><input type="checkbox" /> Poco</li>
+          <li><input type="checkbox" /> Nokia</li>
+          <li><input type="checkbox" /> Motorola</li>
+          <li><input type="checkbox" /> Realme</li>
+        </ul>
+
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Battery capacity
+            </h3>
+            <span class="ml-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="w-4 h-4 mx-auto transition-transform"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <hr class="border-t-2 border-blue-gray-100 mt-2"> 
+
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Screen type
+            </h3>
+            <span class="ml-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="w-4 h-4 mx-auto transition-transform"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <hr class="border-t-2 border-blue-gray-100 mt-2"> 
+
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Screen diagonal
+            </h3>
+            <span class="ml-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="w-4 h-4 mx-auto transition-transform"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <hr class="border-t-2 border-blue-gray-100 mt-2"> 
+
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Protection class
+            </h3>
+            <span class="ml-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="w-4 h-4 mx-auto transition-transform"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+          <hr class="border-2" />
+        </div>
+
+        <hr class="border-t-2 border-blue-gray-100 mt-2"> 
+        <div
+          role="button"
+          class="flex items-center w-full pt-4 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
+        >
+          <button
+            type="button"
+            class="flex items-center justify-between w-full antialiased leading-snug text-left transition-colors border-b-0 select-none border-b-blue-gray-100 text-blue-gray-700 hover:text-blue-gray-900"
+          >
+            <div class="grid place-items-center"></div>
+            <h3
+              class="block mr-auto antialiased leading-relaxed text-lg font-semibold mt-4"
+            >
+              Built-in memory
+            </h3>
+            <span class="ml-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="w-4 h-4 mx-auto transition-transform"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <hr class="border-t-2 border-blue-gray-100 mt-2"> 
+      </aside>
+
+      <!-- Product Grid -->
+      <main class="flex-1 ml-6">
+        <div class="flex justify-between items-center mb-6">
+            <p class="text-[16px] ml-2">
+                Selected Products: <span class="font-bold text-[20px]">85</span>
+            </p>
+        
+            <div class="relative ml-4">
+                <select class="border border-gray-300 rounded-md py-2 bg-gray-100 text-gray-700  px-4 text-gray-600 mr-2 ">
+                    <option value="">By rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 m-2">
+          <!-- Card 1 -->
+           <a href="../html/product_detail.html">
+            <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/phone_card1.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+           </a>
+          
+
+          <!-- Repeat for other cards -->
+          <!-- Card 2 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/iphone14.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/14pro 256white.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+
+        <!-- card rows 2 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 m-2">
+          <!-- Card 1 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/iphone11.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Repeat for other cards -->
+          <!-- Card 2 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/iphone11.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/iphone14.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+
+        <!-- card rows 3 -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 m-2">
+          <!-- Card 1 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/14pink.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Repeat for other cards -->
+          <!-- Card 2 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/14pro 256.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative flex flex-col bg-white shadow-md border border-gray-200 rounded-lg w-full hover:shadow-lg transition-shadow duration-300"
+          >
+            <!-- Heart Icon -->
+            <div class="absolute top-2 right-2">
+              <button
+                class="text-gray-500 hover:text-red-500 focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="p-4 flex justify-center">
+              <div
+                class="relative h-48 overflow-hidden rounded-md bg-clip-border"
+              >
+                <img
+                  src="../image/14pro 256white.png"
+                  alt="card-image"
+                  class="h-full w-[155px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-4 text-center">
+              <p class="text-slate-800 text-lg font-semibold mb-1">
+                Apple iPhone 14 Pro 512GB Gold (MQ233)
+              </p>
+              <p class="text-black-600 text-2xl font-bold mb-2">$1437</p>
+              <button
+                class="rounded-md w-full mt-4 bg-black py-2 text-sm text-white transition-all shadow-md hover:bg-gray-800"
+                type="button"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+
+        <!-- paginetion -->
+
+        <div class="flex space-x-1 justify-center pt-4">
+            <button class="rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.75 19.5l-7.5-7.5 7.5-7.5" />
+                </svg>
+            </button>
+            <button class="min-w-9 rounded-md bg-slate-800 py-2 px-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                1
+            </button>
+            <button class="min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                2
+            </button>
+            <button class="min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                3
+            </button>
+            <button class="min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.25 19.5l7.5-7.5-7.5-7.5" />
+                </svg>
+            </button>
+          </div>
+
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+      <div class="max-w-9xl mx-auto px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Company Description -->
+          <div>
+            <h5 class="text-xl font-semibold mb-4">cyber</h5>
+            <p class="text-slate-400">
+              We are a residential interior design firm located in Portland. Our
+              boutique studio offers more than.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="flex mt-6 space-x-4 pt-[70px]">
+              <a href="#" class="text-slate-400 hover:text-slate-300">
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-slate-400 hover:text-slate-300">
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <!--  -->
+              <a href="#" class="text-slate-400 hover:text-slate-300">
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+              <!--  -->
+              <a href="#" class="text-slate-400 hover:text-slate-300">
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Services Section -->
+          <div>
+            <h6 class="font-semibold mb-2">Services</h6>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Bonus program</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Gift cards</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Credit and payment</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Service contracts</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Non-cash account</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Payment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Assistance Section -->
+          <div>
+            <h6 class="font-semibold mb-2">Assistance to the buyer</h6>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Find an order</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Terms of delivery</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Exchange and return of goods</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Guarantee</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Frequently asked questions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-slate-400 hover:text-slate-300"
+                  >Terms of use of the site</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
